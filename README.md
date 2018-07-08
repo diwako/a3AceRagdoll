@@ -15,7 +15,7 @@ In order to use this script, you need to run these mods alongside it:
 
 ## Installation and configuration:
 Mount this mod and configure it in Eden editor.
-Any configuration will be done within Eden editor and in `Settings -> Addon Options -> Punish unknown weapon`
+Any configuration will be done within Eden editor and in `Settings -> Addon Options -> Diwako's ACE Ragdoll`
 
 ## Troubleshooting
 In any event, that something goes wrong, you can disable ragdolling by setting the variable `diwako_ragdoll_ragdolling` to `false` on all machines.\
