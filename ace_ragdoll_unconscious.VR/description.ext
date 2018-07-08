@@ -1,0 +1,15 @@
+class Extended_PreInit_EventHandlers {
+	class diwako_ragdoll {
+		init = "call compile preprocessFileLineNumbers 'scripts\diwako\ragdoll\cba_settings.sqf'";
+	};
+};
+
+class cfgFunctions {
+	class diwako_ragdoll {
+		tag="diwako_ragdoll";
+		class functions {
+			file = "scripts\diwako\ragdoll";
+			class initRagdoll{};
+		};
+	};
+};
