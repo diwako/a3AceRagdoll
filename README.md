@@ -1,6 +1,6 @@
 # Diwako's ACE Ragdolling
 ## Description
-Been playing with a group for a longer time now and noticed that people immediately know if players are dead or not just according to the way they go down when shot. I kind of wanted to add some uncertainty back to the gameplay when using ace medical.
+Been playing with a group for a long time now and noticed that people immediately know if players are dead or not just according to the way they go down when shot. I kind of wanted to add some uncertainty back to the gameplay when using ace medical.
 
 With this script players will not go into the ace death animation immediately when losing consciousness. Just like they are dying they ragdoll, but will snap to the ace death animation once the ragdolling is done, which pretty much means other players need to check the body to confirm death.
 
