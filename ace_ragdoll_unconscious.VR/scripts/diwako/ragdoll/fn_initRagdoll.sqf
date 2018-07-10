@@ -16,8 +16,6 @@
     none
 */
 
-if(!hasInterface) exitWith {};
-
 // no need to initialise ragdolling twice!
 if (!isNil 'diwako_ragdoll_ragdollRunning') exitWith {};
 diwako_ragdoll_ragdollRunning = true;
