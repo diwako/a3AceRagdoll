@@ -48,7 +48,7 @@ class CfgMovesMaleSdr
 		};
 		class kka3_unc_8: kka3_unc_1
 		{
-			file = "diwako_ragdoll\anims\kka3_unc_8.rtm";
+      file = "diwako_ragdoll\anims\kka3_unc_8.rtm";
 		};
 	};
 };
