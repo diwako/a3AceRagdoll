@@ -15,6 +15,10 @@ class cfgFunctions {
 	};
 };
 
+respawn = BASE;
+respawnDelay = 2;
+respawnDialog = 0;
+
 // Debug (and CBA target debug)
 enableDebugConsole = 1;
 enableTargetDebug = 1;
