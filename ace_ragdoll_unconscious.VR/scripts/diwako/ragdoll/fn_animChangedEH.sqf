@@ -23,7 +23,14 @@ if(!(alive _unit) &&  // do not run if unit is dead
 
 _anim = toLower(_anim);
 
-if( (_anim find "unconsciousrevive") != -1 ) then {
+if(isPlayer _unit) then {
+  diw_last = _anim;
+  diw_debug pushBackUnique _anim;
+};
+
+if((_anim find "unconsciousrevive") != -1 || // catch ragdoll recovery animations
+  {_anim in ["unconsciousoutprone"] || // catch also ragdoll recovery animations
+  {(_anim find "amove") == 0 }} ) then { // catch any movement or stance type of animation (player specific clause)
   _anim = "unconscious";
 
   // figure out which position state is need
