@@ -28,15 +28,15 @@ diwako_ragdoll_ragdollRunning = true;
   if(_state && {(isNull objectParent _unit) && {!([_unit] call ace_medical_fnc_isBeingCarried) && {!([_unit] call ace_medical_fnc_isBeingDragged)}}}) then {
     // ragdoll unit
     _unit setUnconscious true;
-
-    _unit addEventHandler ["AnimChanged",{
-      _this call diwako_ragdoll_fnc_animChangedEH;
-    }];
   };
   if(!_state) then {
     // unit woke up before ragdolling was finished
     _unit setUnconscious false;
   };
 }] call CBA_fnc_addEventHandler;
+
+["CAManBase", "AnimChanged", {
+	_this call diwako_ragdoll_fnc_animChangedEH;
+}] call CBA_fnc_addClassEventHandler;
 
 player createDiaryRecord ["CBA_docs", ["Ragdolling", "Ragdolling has been activated in this mission! Better check those bodies!"]];

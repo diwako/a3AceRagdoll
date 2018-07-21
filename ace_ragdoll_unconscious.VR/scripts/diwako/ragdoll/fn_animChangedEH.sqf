@@ -17,15 +17,13 @@
     none
 */
 params ["_unit","_anim"];
-if(!(_unit getVariable ["ACE_isUnconscious",false])) exitWith {_unit removeEventHandler ["AnimChanged", _thisEventHandler]}; // do not run if unit is conscious
+if(!(_unit getVariable ["ACE_isUnconscious",false])) exitWith {}; // do not run if unit is conscious
 if(!(alive _unit) &&  // do not run if unit is dead
 	{!(isNull objectParent _unit)}) exitWith {}; // do not run if unit in any vehicle
 
 _anim = toLower(_anim);
 
-if( (_anim find "unconsciousrevivedefault") != -1 ) then {
-  // remove this EH
-  _unit removeEventHandler ["AnimChanged", _thisEventHandler];
+if( (_anim find "unconsciousrevive") != -1 ) then {
   _anim = "unconscious";
 
   // figure out which position state is need
