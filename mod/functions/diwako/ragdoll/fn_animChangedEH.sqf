@@ -79,8 +79,11 @@ if((_anim find "unconsciousrevive") != -1 || // catch ragdoll recovery animation
       params ["_unit","_anim"];
       if(_unit getVariable ["ACE_isUnconscious",false]) then {
         // [_unit, _anim, 2, true] call ace_common_fnc_doAnimation;
-        // ["ace_common_switchMove", [_unit, _anim]] call CBA_fnc_globalEvent;
-        _unit switchMove _anim;
+        if(_unit == ace_player) then {
+          ["ace_common_switchMove", [_unit, _anim]] call CBA_fnc_globalEvent;
+        } else {
+          _unit switchMove _anim;
+        };
       };
     }, // code
     [_unit,_anim], // params
@@ -99,8 +102,11 @@ if((_anim find "unconsciousrevive") != -1 || // catch ragdoll recovery animation
           ) then {
           // reapply unconscious animation just in case
           // [_unit, _anim, 2, true] call ace_common_fnc_doAnimation;
-          // ["ace_common_switchMove", [_unit, _anim]] call CBA_fnc_globalEvent;
-          _unit switchMove _anim;
+          if(_unit == ace_player) then {
+            ["ace_common_switchMove", [_unit, _anim]] call CBA_fnc_globalEvent;
+          } else {
+            _unit switchMove _anim;
+          };
         };
         if(!(_unit getVariable ["ACE_isUnconscious",false])) then {
           // unit is not unconscious anymore
