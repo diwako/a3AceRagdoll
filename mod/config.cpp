@@ -15,14 +15,14 @@ class CfgPatches {
     authorUrl = "https://github.com/diwako/a3AceRagdoll";
     version = VERSION;
     versionStr = VERSION;
-	license = "https://www.bohemia.net/community/licenses/arma-public-license-share-alike";
+  license = "https://www.bohemia.net/community/licenses/arma-public-license-share-alike";
   };
 };
 
 class Extended_PreInit_EventHandlers {
-	class diwako_ragdoll {
-		init = "call compile preprocessFileLineNumbers 'diwako_ragdoll\functions\diwako\ragdoll\cba_settings.sqf'";
-	};
+  class diwako_ragdoll {
+    init = "call compile preprocessFileLineNumbers 'diwako_ragdoll\functions\diwako\ragdoll\cba_settings.sqf'";
+  };
 };
 
 #include "cfgFunctions.hpp"
