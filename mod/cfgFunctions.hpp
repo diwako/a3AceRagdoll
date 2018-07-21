@@ -4,6 +4,7 @@ class cfgFunctions {
 		class functions {
 			file = "diwako_ragdoll\functions\diwako\ragdoll";
 			class initRagdoll{};
+			class animChangedEH{};
 		};
 	};
 };

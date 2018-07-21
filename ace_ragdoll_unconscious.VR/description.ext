@@ -10,6 +10,11 @@ class cfgFunctions {
 		class functions {
 			file = "scripts\diwako\ragdoll";
 			class initRagdoll{};
+			class animChangedEH{};
 		};
 	};
 };
+
+// Debug (and CBA target debug)
+enableDebugConsole = 1;
+enableTargetDebug = 1;

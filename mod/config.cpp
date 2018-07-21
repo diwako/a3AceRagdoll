@@ -1,5 +1,5 @@
 ﻿#define REQUIRED_VERSION 1.82
-#define VERSION "1.0"
+#define VERSION "1.1"
 
 class CfgPatches {
   class diwako_ragdoll {
@@ -26,3 +26,4 @@ class Extended_PreInit_EventHandlers {
 };
 
 #include "cfgFunctions.hpp"
+#include "cfgMovesMaleSdr.hpp"
