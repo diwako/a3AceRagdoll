@@ -29,8 +29,8 @@ if(isPlayer _unit) then {
 };
 
 if((_anim find "unconsciousrevive") != -1 || // catch ragdoll recovery animations
-  {_anim in ["unconsciousoutprone"] || // catch also ragdoll recovery animations
-  {(_anim find "amove") == 0 }} ) then { // catch any movement or stance type of animation (player specific clause)
+  {_anim == "unconsciousoutprone" || // catch another ragdoll recovery animation
+  {(_anim find "amov") == 0 }} ) then { // catch any movement or stance type of animation (player specific clause)
   _anim = "unconscious";
 
   // figure out which position state is need
