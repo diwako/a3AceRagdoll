@@ -35,7 +35,6 @@ diwako_ragdoll_ragdollRunning = true;
   };
 }] call CBA_fnc_addEventHandler;
 
-diw_debug = [];
 ["CAManBase", "AnimChanged", {
 	_this call diwako_ragdoll_fnc_animChangedEH;
 }] call CBA_fnc_addClassEventHandler;
