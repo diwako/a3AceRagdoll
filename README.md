@@ -17,12 +17,18 @@ In order to use this script, you need to run these mods alongside it:
 Mount this mod and configure it in Eden editor.
 Any configuration will be done within Eden editor and in `Settings -> Addon Options -> Diwako's ACE Ragdoll`
 
+Beginning with version 1.1 server only mode is available for the mod is avaiable. Script version has the option as well, but it is a rather useless thing there.\
+When server only mode is activated then only the server needs to run the mod, the drawback is that no custom animations will be supported!
+
 ## Troubleshooting
 In any event, that something goes wrong, you can disable ragdolling by setting the variable `diwako_ragdoll_ragdolling` to `false` on all machines.\
 Additionally for ingame error handling you can either run ACE's headbug fix or reapply unconsciousness and take it away again.
 
 ## Additional
 Discussion can be found in the [BI Thread](https://forums.bohemia.net/forums/topic/215720-release-ragdolling-on-player-ace-unconsciousness/), for bug reports please use the thread on the BI forums.
+
+## Special thanks
+Special thanks to KokaKolaA3 for donating animations!
 
 ## License
 Copyright 2018 diwako
