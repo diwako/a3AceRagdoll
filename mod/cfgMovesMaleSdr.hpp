@@ -51,5 +51,37 @@ class CfgMovesMaleSdr
     {
       file = "diwako_ragdoll\anims\kka3_unc_8.rtm";
     };
+    class kka3_unc_1_1: kka3_unc_1
+    {
+      file = "diwako_ragdoll\anims\kka3_unc_1_1.rtm";
+    };
+    class kka3_unc_2_1: kka3_unc_1
+    {
+      file = "diwako_ragdoll\anims\kka3_unc_2_1.rtm";
+    };
+    class kka3_unc_3_1: kka3_unc_1
+    {
+      file = "diwako_ragdoll\anims\kka3_unc_3_1.rtm";
+    };
+    class kka3_unc_4_1: kka3_unc_1
+    {
+      file = "diwako_ragdoll\anims\kka3_unc_4_1.rtm";
+    };
+    class kka3_unc_5_1: kka3_unc_1
+    {
+      file = "diwako_ragdoll\anims\kka3_unc_5_1.rtm";
+    };
+    class kka3_unc_6_1: kka3_unc_1
+    {
+      file = "diwako_ragdoll\anims\kka3_unc_6_1.rtm";
+    };
+    class kka3_unc_7_1: kka3_unc_1
+    {
+      file = "diwako_ragdoll\anims\kka3_unc_7_1.rtm";
+    };
+    class kka3_unc_8_1: kka3_unc_1
+    {
+      file = "diwako_ragdoll\anims\kka3_unc_8_1.rtm";
+    };
   };
 };
