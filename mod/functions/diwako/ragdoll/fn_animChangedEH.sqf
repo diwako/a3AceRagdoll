@@ -67,13 +67,11 @@ if((_anim find "unconsciousrevive") != -1 || // catch ragdoll recovery animation
     };
   };
 
-  _unit setUnconscious false;
   // play animation
   [
     {
       params ["_unit","_anim"];
       if(_unit getVariable ["ACE_isUnconscious",false]) then {
-        // [_unit, _anim, 2, true] call ace_common_fnc_doAnimation;
         if(_unit == ace_player) then {
           ["ace_common_switchMove", [_unit, _anim]] call CBA_fnc_globalEvent;
         } else {
@@ -83,6 +81,16 @@ if((_anim find "unconsciousrevive") != -1 || // catch ragdoll recovery animation
     }, // code
     [_unit,_anim], // params
     0.2 // delay
+  ] call CBA_fnc_waitAndExecute;
+  [
+    {
+      params ["_unit","_anim"];
+      if(_unit getVariable ["ACE_isUnconscious",false]) then {
+        _unit setUnconscious false;
+      };
+    }, // code
+    [_unit,_anim], // params
+    5 // delay
   ] call CBA_fnc_waitAndExecute;
 
   // combat network sync issues
@@ -96,7 +104,6 @@ if((_anim find "unconsciousrevive") != -1 || // catch ragdoll recovery animation
           {!([_unit] call ace_medical_fnc_isBeingDragged)}}} // not being dragged
           ) then {
           // reapply unconscious animation just in case
-          // [_unit, _anim, 2, true] call ace_common_fnc_doAnimation;
           if(_unit == ace_player) then {
             ["ace_common_switchMove", [_unit, _anim]] call CBA_fnc_globalEvent;
           } else {
@@ -107,13 +114,13 @@ if((_anim find "unconsciousrevive") != -1 || // catch ragdoll recovery animation
           // unit is not unconscious anymore
           _unit setUnconscious false;
           // free unit of unconscious animation if it is still trapped in it
-          if(animationState _unit == _anim) then {
-            _unit switchMove "";
+          if(local _unit) then {
+            ["ace_common_switchMove", [_unit, (animationState _unit)]] call CBA_fnc_globalEvent;
           };
         };
       }, // code
       [_unit,_anim], // params
-      6.25 // delay
+      10 // delay
     ] call CBA_fnc_waitAndExecute;
   };
 };
