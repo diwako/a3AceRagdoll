@@ -22,14 +22,13 @@ diwako_ragdoll_ragdollRunning = true;
 
 ["ace_unconscious", {
   params [["_unit", objNull],["_state", false]];
-  // if(!local _unit || {!diwako_ragdoll_ragdolling}) exitWith {}; // ragdolling if it's active and unit local
-  if(!diwako_ragdoll_ragdolling) exitWith {}; // ragdolling if it's active
-  if((!(isPlayer _unit) && {!diwako_ragdoll_ai})) exitWith {}; // only ragdoll players and only ragdolling AI if that option is set active
-  if(_state && {(isNull objectParent _unit) && {!([_unit] call ace_medical_fnc_isBeingCarried) && {!([_unit] call ace_medical_fnc_isBeingDragged)}}}) then {
+  if (!diwako_ragdoll_ragdolling) exitWith {}; // ragdolling if it's active
+  if ((!(isPlayer _unit) && {!diwako_ragdoll_ai})) exitWith {}; // only ragdoll players and only ragdolling AI if that option is set active
+  if (_state && {(isNull objectParent _unit) && {!([_unit] call ace_medical_fnc_isBeingCarried) && {!([_unit] call ace_medical_fnc_isBeingDragged)}}}) then {
     // ragdoll unit
     _unit setUnconscious true;
   };
-  if(!_state) then {
+  if (!_state) then {
     // unit woke up before ragdolling was finished
     _unit setUnconscious false;
   };
