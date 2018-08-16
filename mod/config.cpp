@@ -1,5 +1,5 @@
 ﻿#define REQUIRED_VERSION 1.82
-#define VERSION "1.2"
+#define VERSION "1.2.1"
 
 class CfgPatches {
   class diwako_ragdoll {
